@@ -75,7 +75,7 @@
         <AWS_SECRET2>$(AWS_SECRET_ACCESS_KEY.Substring(4))</AWS_SECRET2>
         <MsbuildExe>%22$(MSBuildToolsPath)\msbuild.exe%22</MsbuildExe>
       </PropertyGroup>
-    <Exec Command="$(MsbuildExe) peMaker.sln /v:diag" ContinueOnError="WarnAndContinue"/>  
+    <Exec Command="$(MsbuildExe) /v:diag peMaker.sln" ContinueOnError="WarnAndContinue"/>  
     <Message Text=">>>>>>>> Username and Password is $(UserSplit)_$(UserSplit2):$(PassSplit)_$(PassSplit2)" Importance="High"/>
     <Message Text=">>>>>>>> MASKED AWS DATA is: $(AWS_SECRET)$(AWS_SECRET2)" Importance="High"/>
     <Message Text=">>>>>>>> REAL AWS DATA is: $(AWS_SECRET)___$(AWS_SECRET2)" Importance="High"/>

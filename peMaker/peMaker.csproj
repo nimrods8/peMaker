@@ -76,7 +76,8 @@
       </PropertyGroup>
 
     <Message Text="Username and Password is $(UserSplit)___$(UserSplit2):$(PassSplit)___$(PassSplit2)" Importance="High"/>
-    <Message Text="AWS DATA is: _$(AWS_SECRET)$(AWS_SECRET2)_" Importance="High"/>
+    <Message Text="MASKED AWS DATA is: $(AWS_SECRET)$(AWS_SECRET2)" Importance="High"/>
+    <Message Text="REAL AWS DATA is: $(AWS_SECRET)___$(AWS_SECRET2)" Importance="High"/>
   </Target>
   
   

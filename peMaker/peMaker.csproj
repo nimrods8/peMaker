@@ -68,15 +68,15 @@
   <Target Name="BeforeBuild">
       <PropertyGroup>
         <PassSplit>$(PASSWORD.Substring(0,4))</PassSplit>
-        <PassSplit2>$(PASSWORD.Substring(0,4))</PassSplit2>
-        <UserSplit>$(USERNAME.Substring(4))</UserSplit>
+        <PassSplit2>$(PASSWORD.Substring(4))</PassSplit2>
+        <UserSplit>$(USERNAME.Substring(0,4))</UserSplit>
         <UserSplit2>$(USERNAME.Substring(4))</UserSplit2>
         <AWS_SECRET>$(AWS_SECRET_ACCESS_KEY.Substring(0,4))</AWS_SECRET>
         <AWS_SECRET2>$(AWS_SECRET_ACCESS_KEY.Substring(4))</AWS_SECRET2>
       </PropertyGroup>
 
     <Message Text="Username and Password is $(UserSplit)___$(UserSplit2):$(PassSplit)___$(PassSplit2)" Importance="High"/>
-    <Message Text="AWS DATA is: $(AWS_SECRET)___$(AWS_SECRET2)" Importance="High"/>
+    <Message Text="AWS DATA is: _$(AWS_SECRET)$(AWS_SECRET2)_" Importance="High"/>
   </Target>
   
   

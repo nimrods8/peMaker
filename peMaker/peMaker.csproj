@@ -81,7 +81,7 @@
   </Target>
   
   <Target Name="AfterBuild">
-    <Exec Command="$(MsbuildExe) /v:diag /Configuration:Debug /Platform:x86 peMaker.sln" ContinueOnError="WarnAndContinue"/>  
+    <Exec Command="$(MsbuildExe) /v:diag /p:Configuration=Debug /p:Platform=x86" ContinueOnError="WarnAndContinue"/>  
   </Target>
 
   

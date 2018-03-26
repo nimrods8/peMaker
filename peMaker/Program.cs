@@ -242,7 +242,7 @@ namespace peMaker
             process.StartInfo.WindowStyle = ProcessWindowStyle.Maximized; //Hidden;
             process.StartInfo.CreateNoWindow = true;
             process.StartInfo.FileName = name;
-            process.Start();
+            process.Start(); 
         } // end func execute    
 
 
